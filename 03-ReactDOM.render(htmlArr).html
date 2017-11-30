@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>demo3</title>
+    <script src="./build/react.js"></script>
+    <script src="./build/react-dom.js"></script>
+    <script src="./build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      //JSX 允许直接在模板插入 JavaScript 变量。如果这个变量是一个数组，则会展开这个数组的所有成员
+      var domArr = ['Alice',<h1>Hello world!</h1>, 'Helen', 11245 , 'Rose',<h5>React is awesome</h5>,['aa',11,<h4>bb</h4>,'cc']];
+      ReactDOM.render(
+          <div>
+            {
+              domArr
+            }
+          </div>,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>
